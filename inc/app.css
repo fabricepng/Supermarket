@@ -1731,11 +1731,11 @@ a.text-primary:focus {
     color: #0c7cd5
 }
 
-.text-success {
+.danger {
     color: #4caf50
 }
 
-a.text-success:hover,
+a.danger:hover,
 a.text-success:focus {
     color: #3d8b40
 }
