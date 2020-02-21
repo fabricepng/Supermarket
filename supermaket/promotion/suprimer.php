@@ -6,9 +6,9 @@ $id = $_GET['id'];
 
 function suprimer($id)
 {
-    require'bd.php';
+    require'connexion.php';
     //preparation de la requête
-    $pdostat= $pdo->prepare('DELETE FROM promotion WhERE id_promotion = :ref LIMIT 1');
+    $pdostat= $bdd->prepare('DELETE FROM promotion WhERE id_promotion = :ref LIMIT 1');
     //liaison du parametre
     $pdostat->bindValue(':ref',$id,PDO::PARAM_INT);
     //execution de la requete
@@ -17,7 +17,7 @@ function suprimer($id)
     // verification
         if ($executeIsOk) {
 
-        header("Location:../index.php ");
+        header("Location:index.php ");
         }else{
 
             $message='echec';
@@ -28,7 +28,7 @@ if ($id != 0) {
     suprimer($id);
 }
 
-  
+
 
 
 
