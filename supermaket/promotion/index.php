@@ -47,7 +47,7 @@ if (isset($_POST['ok'])) {
 <!-- Affichage de promo  -->
 <?php
 //preparation de la requete
-$requete = "SELECT * from promotion";
+$requete = "SELECT * from promotion;";
 // execution
 $result =$bdd->query($requete);
 ?>
